@@ -7,23 +7,27 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
   
- <link rel="stylesheet" href="css/main.css">
- <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/fonts.css">
+
+  <script src="js/navmenu.js" defer></script>
   
 </head>
 
 <body>
 
-  <header>
+  <header class="main-header">
     <div class="header-div">
-      <img src="images/logo.svg" alt="logo shortly">
-      <nav>
+      <img src="images/logo.svg" alt="logo shortly" class="logo-principal">
+      <nav class="main-nav">
         <ul>
           <li><a href="">Features</a></li>
           <li><a href="">Pricing</a></li>
-          <li><a href="">Resources</a></li>
+          <li><a href="#main">Resources</a></li>
+          <span class="line-li"></span>
           <li><a href="">Login</a></li>
-          <li><a href="">Sign Up</a></li>
+          <li class="signUp-li"><a href="" >Sign Up</a></li>
         </ul>
       </nav>
   
@@ -35,24 +39,21 @@
 
     </div>
 
-
   </header>
 
   <main>
 
-    <section>
-      <img src="images/illustration-working.svg" alt="illustration of people working">
+    <section id="main">
+      <img src="images/illustration-working.svg" alt="illustration of people working" class="illustration">
 
       <h1>More than just shorter links</h1>
       <p>Build your brand’s recognition and get detailed insights
         on how your links are performing.</p>
-      <a href="#">Get Started</a>
+      <a href="#" class="getStarted-button">Get Started</a>
 
-      <div>
-
+      <div class="shorten-div">
         <input type="text" placeholder="Shorten a link here...">
         <button>Shorten It!</button>
-
       </div>
 
     </section>
@@ -65,22 +66,29 @@
 
       <div class="flex">
 
-        <div>
-          <img src="images/icon-brand-recognition.svg" alt="Brand recognition logo">
+        <div class="info">
+          <span class="icons">
+            <img src="images/icon-brand-recognition.svg" alt="Brand recognition logo">
+          </span>
+          
           <h3>Brand Recognition</h3>
           <p> Boost your brand recognition with each click. Generic links don’t
             mean a thing. Branded links help instil confidence in your content.</p>
         </div>
-
-        <div>
-          <img src="images/icon-detailed-records.svg" alt="Detailed records logo">
+        <span class="border"></span>
+        <div class="info">
+          <span class="icons">
+            <img src="images/icon-detailed-records.svg" alt="Detailed records logo">
+          </span>
           <h3>Detailed Records</h3>
           <p>Gain insights into who is clicking your links. Knowing when and where
             people engage with your content helps inform better decisions.</p>
         </div>
-
-        <div>
-          <img src="images/icon-fully-customizable.svg" alt="Fully customizable logo">
+        <span class="border"></span>
+        <div class="info">
+          <span class="icons">
+            <img src="images/icon-fully-customizable.svg" alt="Fully customizable logo">
+          </span>
           <h3>Fully Customizable</h3>
           <p>Improve brand awareness and content discoverability through customizable
             links, supercharging audience engagement.</p>
@@ -90,13 +98,15 @@
 
     </section>
 
-    <section>
-      <h2>Boost your links today</h2>
-      <a href="#">Get Started</a>
+    <section class="boost-section">
+      <div class="boost-div">
+        <h2>Boost your links today</h2>
+        <a href="#" class="getStarted-button">Get Started</a>
+      </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="main-footer">
     <img src="images/logo.svg" alt="logo shortly">
     <div>
       <h4>Features</h4>
