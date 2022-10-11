@@ -171,18 +171,18 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
   padding: 25px 0;
   border-radius: 14px;
 }
-.shorten-div input, .shorten-div button{
+.link-input, .button-send{
   padding: 16px 0;
   border-radius: 6px;
   width: 86%;
   border: none;
 }
-.shorten-div input::placeholder{
+.link-input::placeholder{
   position: absolute;
   left: 16px;
   color: hsl(0, 0%, 75%);
 }
-.shorten-div button:nth-child(1){
+.button-send{
   color: white;
   background-color: var(--cyan);
   font-weight: bold;
@@ -193,29 +193,34 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
   display: inline-flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
   margin: 20px 0;
   width: 100%;
   text-align: center;
   border-radius: 10px;
+  text-align: start;
+}
+.generated-div p, .generated-div a, .generated-div button{
+  min-width: 90%;
+  width: 90%;
+}
+.generated-div p , .generated-div a{
+  margin: 20px 0 10px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .generated-div p{
   color: var(--darkBlue);
-  margin: 20px 0 10px;
 }
 .generated-div a{
-  overflow-x: none;
   color: var(--cyan);
-  margin: 14px 0 10px;
 }
 .generated-div span{
   display: block;
-  width: 96%;
-  background-color: var(--dark);
+  width: 98%;
+  background-color: var(--gray);
   height: 1px;
 }
 .generated-div button{
-  width: 90%;
   background-color: var(--cyan);
   border: 0;
   padding: 14px 0;
