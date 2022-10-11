@@ -17,9 +17,9 @@ function get(url){
 }
 
 function createDiv(link){
-    $linksgenerate.appendChild(div);
-    div.setAttribute("class", "generated-div");
     setTimeout(() => {
+        $linksgenerate.appendChild(div);
+        div.setAttribute("class", "generated-div");
         p.textContent = $linkInput.value;
         div.appendChild(p);
         div.appendChild(span);
