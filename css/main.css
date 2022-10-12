@@ -81,6 +81,7 @@ a{text-decoration: none;}
   align-items: center;
   gap: 35px;
   padding: 40px 0;
+  max-width: 700px;
   justify-content: center;
   flex-direction: column;
   background-color: var(--darkViolet);
@@ -99,9 +100,12 @@ a{text-decoration: none;}
   height: 0.1px;
   background-color: var(--grayish);
 }
-
 .signUp-li{
-  padding: 15px 30%;
+  width: 100%;
+  margin: 10px 0;
+}
+.signUp-li a{
+  padding: 12px 34%;
   background-color: var(--cyan);
   border-radius: 25px;
 }
@@ -154,8 +158,10 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
 }
 
 .links-generate{
-  width: 90%;
-  margin: 0 auto;
+  width: 88%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
 }
 .shorten-div{
   background-image: url(/images/bg-shorten-mobile.svg);
@@ -163,29 +169,57 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
   background-position: right top;
   background-repeat: no-repeat;
   background-size: 260px;
+  max-width: 700px;
+  padding: 25px 0;
+  border-radius: 14px;
+  width: 100%;
+}
+.link-flex{
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  width: 100%;
-  padding: 25px 0;
-  border-radius: 14px;
+  width: 86%;
 }
-.link-input, .button-send{
+.label-link{
+  width: 100%;
+  text-align: start;
+}
+.error-link{
+  color: var(--red);
+  font-weight: bold;
+  font-size: 0.85em;
+  margin-top: 5px;
+  display: none;
+}
+.error-link.active{
+  display: inline-block;
+}
+.link-class, .button-send{
   padding: 16px 0;
   border-radius: 6px;
-  width: 86%;
   border: none;
+  width: 100%;
+  box-sizing: border-box;
 }
-.link-input::placeholder{
+.link-class{
+  padding-left: 10px;
+}
+.link-class::placeholder{
   position: absolute;
-  left: 16px;
   color: hsl(0, 0%, 75%);
+}
+.link-class:focus{
+  outline: 2px solid var(--cyan);
+}
+.link-class.active{
+  outline: 3px solid var(--red);
 }
 .button-send{
   color: white;
   background-color: var(--cyan);
   font-weight: bold;
+  cursor: pointer;
 }
 
 .generated-div{
@@ -228,6 +262,7 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
   border-radius: 10px;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .flex{
