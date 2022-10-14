@@ -28,7 +28,7 @@ $linksGenerate.addEventListener("click", function(e){
         setTimeout(function(){
             father.classList.remove("active");
             father.getElementsByTagName("button")[0].textContent = "Copy";
-        },2000)
+        },2000);
     }
 })
 
@@ -53,16 +53,17 @@ function send(){
     let data;
     let link;
     try{
-        if(new URL($linkInput.value)){
+        data = get("https://api.shrtco.de/v2/shorten?url=" + $linkInput.value);
+        link = JSON.parse(data);
+        if(new URL($linkInput.value) && !link.error_code){
             $linkInput.classList.remove("active")
             $errorLink.classList.remove("active");
-            data = get("https://api.shrtco.de/v2/shorten?url=" + $linkInput.value);
-            link = JSON.parse(data);
             createDiv(link);
         }
     }catch(error){
-        data = 0;
-        link = 0;
+        console.clear();
+        data = null;
+        link = null;
         $linkInput.classList.add("active")
         $errorLink.classList.add("active");
     }
