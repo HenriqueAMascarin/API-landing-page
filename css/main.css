@@ -232,6 +232,7 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
   text-align: center;
   border-radius: 10px;
   text-align: start;
+  max-width: 700px;
 }
 .generated-div p, .generated-div a, .generated-div button{
   min-width: 90%;
@@ -241,6 +242,7 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
   margin: 20px 0 10px;
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .generated-div p{
   color: var(--darkBlue);
@@ -264,7 +266,9 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
   font-weight: bold;
   cursor: pointer;
 }
-
+.generated-div.active button{
+  background-color: var(--darkViolet);
+}
 .flex{
   display: inline-flex;
   flex-direction: column;

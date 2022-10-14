@@ -18,16 +18,19 @@ function createElements(){
     button = document.createElement("button");
     a = document.createElement("a");
 }
+
 $linksGenerate.addEventListener("click", function(e){
     if(e.target.tagName === "BUTTON" && e.target.parentNode.classList.contains("generated-div")){
         let father = e.target.parentNode;
-        navigator.clipboard.writeText(father.child(document.querySelector(".generated-div a")).textContent);
-        div.appendChild(button).textContent = "Copied!";
-        console.log("copiou");
+        navigator.clipboard.writeText(father.getElementsByTagName("a")[0].textContent);
+        father.classList.add("active");
+        father.getElementsByTagName("button")[0].textContent = "Copied!";
+        setTimeout(function(){
+            father.classList.remove("active");
+            father.getElementsByTagName("button")[0].textContent = "Copy";
+        },2000)
     }
 })
-    
-
 
 function createDiv(link){
     createElements();
@@ -47,15 +50,19 @@ function createDiv(link){
 }
 
 function send(){
+    let data;
+    let link;
     try{
         if(new URL($linkInput.value)){
             $linkInput.classList.remove("active")
             $errorLink.classList.remove("active");
-            let data = get("https://api.shrtco.de/v2/shorten?url=" + $linkInput.value);
-            let link = JSON.parse(data);
+            data = get("https://api.shrtco.de/v2/shorten?url=" + $linkInput.value);
+            link = JSON.parse(data);
             createDiv(link);
         }
     }catch(error){
+        data = 0;
+        link = 0;
         $linkInput.classList.add("active")
         $errorLink.classList.add("active");
     }
