@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-  
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/fonts.css">
 
   <script src="js/navmenu.js" defer></script>
   <script src="js/link-shorter.js" defer></script>
-  
+
 </head>
 
 <body>
@@ -31,7 +31,7 @@
           <li class="signUp-li"><a href="">Sign Up</a></li>
         </ul>
       </nav>
-  
+
       <div class="hamburguer">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -45,19 +45,21 @@
   <main>
 
     <section id="main">
-      <img src="images/illustration-working.svg" alt="illustration of people working" class="illustration">
-
-      <h1>More than just shorter links</h1>
-      <p>Build your brand’s recognition and get detailed insights
-        on how your links are performing.</p>
-      <a href="#" class="getStarted-button">Get Started</a>
+      <div class="flex-main">
+        <img src="images/illustration-working.svg" alt="illustration of people working" class="illustration">
+        <div class="shorter-info">
+          <h1>More than just shorter links</h1>
+          <p>Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+          <a href="#" class="getStarted-button">Get Started</a>
+        </div>
+      </div>
 
       <div class="links-generate">
         <div class="shorten-div">
           <div class="link-flex">
             <label for="link-input" class="label-link">
               <input type="text" placeholder="Shorten a link here..." id="link-input" class="link-class">
-              <p class="error-link">Please add a link</p> 
+              <p class="error-link">Please add a link</p>
             </label>
             <button class="button-send">Shorten It!</button>
           </div>
@@ -66,19 +68,19 @@
 
     </section>
 
-    <section>
+    <section id="statistics">
 
       <h2>Advanced Statistics</h2>
       <p>Track how your links are performing across the web with our
         advanced statistics dashboard.</p>
 
-      <div class="flex">
+      <div class="flex-info">
 
         <div class="info">
           <span class="icons">
             <img src="images/icon-brand-recognition.svg" alt="Brand recognition logo">
           </span>
-          
+
           <h3>Brand Recognition</h3>
           <p> Boost your brand recognition with each click. Generic links don’t
             mean a thing. Branded links help instil confidence in your content.</p>
@@ -115,8 +117,8 @@
   </main>
 
   <footer class="main-footer">
-    <img src="images/logo.svg" alt="logo shortly" class="logo-footer">
-    <div>
+    <div class="flex-footer">
+      <img src="images/logo.svg" alt="logo shortly" class="logo-footer">
       <div class="info-footer">
         <h4>Features</h4>
         <ul>
@@ -125,7 +127,7 @@
           <li><a href="#">Analytics</a></li>
         </ul>
       </div>
-      
+
       <div class="info-footer">
         <h4>Resources</h4>
         <ul>
@@ -134,7 +136,7 @@
           <li><a href="#">Support</a></li>
         </ul>
       </div>
-      
+
       <div class="info-footer">
         <h4>Company</h4>
         <ul>
@@ -145,15 +147,13 @@
         </ul>
       </div>
 
+      <div class="social-logos">
+        <a href=""><img src="images/icon-facebook.svg" alt="Facebook logo"></a>
+        <a href=""><img src="images/icon-twitter.svg" alt="Twitter logo"></a>
+        <a href=""><img src="images/icon-pinterest.svg" alt="Pinterest logo"></a>
+        <a href=""><img src="images/icon-instagram.svg" alt="Instagram logo"></a>
+      </div>
     </div>
-
-    <div class="social-logos">
-      <img src="images/icon-facebook.svg" alt="Facebook logo">
-      <img src="images/icon-twitter.svg" alt="Twitter logo">
-      <img src="images/icon-pinterest.svg" alt="Pinterest logo">
-      <img src="images/icon-instagram.svg" alt="Instagram logo">
-    </div>
-
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://github.com/LuckTheGamers" target="_blank">Henrique de Albuquerque Mascarin</a>.
