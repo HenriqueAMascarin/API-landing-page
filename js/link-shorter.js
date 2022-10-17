@@ -55,16 +55,16 @@ function send(){
     try{
         data = get("https://api.shrtco.de/v2/shorten?url=" + $linkInput.value);
         link = JSON.parse(data);
-        if(new URL($linkInput.value) && !link.error_code){
+        if(new URL($linkInput.value) && !!link.error_code === false){
             $linkInput.classList.remove("active")
             $errorLink.classList.remove("active");
             createDiv(link);
         }
     }catch(error){
+        $linkInput.classList.add("active")
+        $errorLink.classList.add("active");
         console.clear();
         data = null;
         link = null;
-        $linkInput.classList.add("active")
-        $errorLink.classList.add("active");
     }
 }
