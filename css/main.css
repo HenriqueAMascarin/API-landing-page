@@ -179,18 +179,23 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 1em;
   width: 86%;
 }
 .label-link{
   width: 100%;
   text-align: start;
+  display: inline-flex;
+  flex-direction: column;
 }
+
 .error-link{
   color: var(--red);
   font-weight: bold;
   font-size: 0.85em;
-  margin-top: 5px;
+  margin: 0.4em 0 0;
+  padding: 0;
+  font-style: italic;
   display: none;
 }
 .error-link.active{
@@ -205,7 +210,9 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
 }
 .link-class{
   padding-left: 10px;
+  position: relative;
 }
+
 .link-class::placeholder{
   position: absolute;
   color: hsl(0, 0%, 75%);
@@ -287,7 +294,7 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
   align-items: center;
   border-radius: 10px;
   background-color: white;
-  padding: 50px 10px 50px;
+  padding: 50px 0;
   width: var(--border);
   position: relative;
   box-sizing: content-box;
@@ -449,6 +456,12 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
   }
   .link-flex{
     flex-direction: row;
+  }
+  .label-link span{
+    position: relative;
+  }
+  .error-link{
+    position: absolute;
   }
   .link-class, .button-send{
     padding: 1.2em 0;
