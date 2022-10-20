@@ -56,10 +56,15 @@ function createDiv(link){
     div.appendChild(a).setAttribute("href", link.result.full_short_link);
 
     div.appendChild(button).textContent = "Copy";
+    clearInput()
+}
+
+function clearInput(){
     $linkInput.value = ""; 
 }
 
 function error(){
+    clearInput();
     console.clear();
     data = null;
     link = null;
