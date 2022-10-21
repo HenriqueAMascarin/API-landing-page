@@ -25,7 +25,7 @@ Os usuários devem conseguir acessar um site responsivo que funcione bem o mecan
 
 ### Links
 
-- Frontend Mentor URL: 
+- Frontend Mentor URL: https://www.frontendmentor.io/solutions/shortly-url-page-only-pure-js-nnkGismGU_
 - URL do site: https://api-landing-page-luckthegamers.vercel.app.
 
 ### Tecnologias usadas
