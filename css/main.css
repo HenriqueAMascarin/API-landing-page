@@ -535,11 +535,12 @@ transform: translate3d(0,8px,0) rotate3d(0,0,1,45deg);}
   .link-flex{
     flex-direction: row;
   }
-  .label-link span{
+  .label-link{
     position: relative;
   }
   .error-link{
     position: absolute;
+    bottom: -2em;
   }
   .link-class, .button-send{
     padding: 1.2em 0;
